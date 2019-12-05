@@ -2,7 +2,7 @@ require_relative 'lib/rubocop/rubycw/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "rubocop-rubycw"
-  spec.version       = Rubocop::Rubycw::VERSION
+  spec.version       = RuboCop::Rubycw::VERSION
   spec.authors       = ["Masataka Pocke Kuwabara"]
   spec.email         = ["kuwabara@pocke.me"]
 
@@ -25,4 +25,7 @@ Gem::Specification.new do |spec|
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
+
+  spec.add_runtime_dependency 'rubocop'
 end
+
