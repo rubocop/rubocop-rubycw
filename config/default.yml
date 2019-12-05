@@ -1,1 +1,5 @@
 # Write it!
+
+Rubycw/Rubycw:
+  Description: 'Execute `ruby -cw` and wrap the warning as RuboCop offense.'
+  Enabled: true
