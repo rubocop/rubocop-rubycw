@@ -13,6 +13,13 @@ RSpec.describe RuboCop::Cop::Rubycw::Rubycw do
     RUBY
   end
 
+  it 'registers an offense for duplicated range of regexp' do
+    expect_offense(<<~RUBY)
+      /[aaa]/
+      ^ character class has duplicated range: /[aaa]/
+    RUBY
+  end
+
   it 'does not register an offense to clean code' do
     expect_no_offenses(<<~RUBY)
       p 1
