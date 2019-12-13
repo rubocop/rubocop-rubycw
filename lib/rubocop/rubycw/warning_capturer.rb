@@ -4,10 +4,8 @@ module RuboCop
   module Rubycw
     module WarningCapturer
       if defined?(RubyVM::AbstractSyntaxTree)
-        require 'stringio'
-
         module ::Warning
-          def warn(*message)
+          def self.warn(*message)
             if WarningCapturer.warnings
               WarningCapturer.warnings.concat message
             else
