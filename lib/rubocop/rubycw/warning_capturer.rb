@@ -19,16 +19,19 @@ module RuboCop
         def self.capture(source)
           start
           RubyVM::AbstractSyntaxTree.parse(source)
-          warnings.tap do
-            stop
-          end
+          warnings
+        ensure
+          stop
         end
 
         def self.start
+          @verbose = $VERBOSE
+          $VERBOSE = true
           @warnings = []
         end
 
         def self.stop
+          $VERBOSE = @verbose if defined?(@verbose)
           @warnings = nil
         end
 
