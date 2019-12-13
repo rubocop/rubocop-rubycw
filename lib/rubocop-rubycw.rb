@@ -8,4 +8,5 @@ require_relative 'rubocop/rubycw/inject'
 
 RuboCop::Rubycw::Inject.defaults!
 
+require_relative 'rubocop/rubycw/warning_capturer'
 require_relative 'rubocop/cop/rubycw_cops'
