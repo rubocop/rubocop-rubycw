@@ -4,6 +4,12 @@ Integrate RuboCop and `ruby -cw`.
 
 You can get Ruby's warning as a RuboCop offense by rubocop-rubycw.
 
+## Requirements
+
+* Ruby 2.3 or greater.
+  * But I highly recommend to use Ruby 2.6 or greater.
+    Because it is about 10x slower if it works on Ruby 2.5 or lower.
+
 ## Installation
 
 Add this line to your application's Gemfile:
