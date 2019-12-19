@@ -10,6 +10,7 @@ Gem::Specification.new do |spec|
   spec.description   = %q{Integrate RuboCop and ruby -cw}
   spec.homepage      = "https://github.com/pocke/rubocop-rubycw"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
+  spec.license       = 'MIT'
 
   # spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
