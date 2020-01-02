@@ -10,6 +10,9 @@ RSpec.describe RuboCop::Cop::Rubycw::Rubycw do
       1
       ^ unused literal ignored
       p 1
+
+      p if /re/
+      ^ regex literal in condition
     RUBY
   end
 
