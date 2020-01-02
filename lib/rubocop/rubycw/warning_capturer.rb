@@ -43,7 +43,7 @@ module RuboCop
         require 'open3'
 
         def self.capture(source)
-          _stdout, stderr, _status = Open3.capture3(RbConfig.ruby, '-cw', '-e', source)
+          _stdout, stderr, _status = Open3.capture3(RbConfig.ruby, '-cw', stdin_data: source)
           stderr.lines.map(&:chomp)
         end
       end
