@@ -15,7 +15,7 @@ You can get Ruby's warning as a RuboCop offense by rubocop-rubycw.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'rubocop-rubycw'
+gem 'rubocop-rubycw', require: false
 ```
 
 And then execute:
