@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.summary       = %q{Integrate RuboCop and ruby -cw}
   spec.description   = %q{Integrate RuboCop and ruby -cw}
   spec.homepage      = "https://github.com/rubocop-hq/rubocop-rubycw"
-  spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
+  spec.required_ruby_version = Gem::Requirement.new(">= 2.4.0")
   spec.license       = 'MIT'
 
   # spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
@@ -27,6 +27,5 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_runtime_dependency 'rubocop'
+  spec.add_runtime_dependency 'rubocop', '~> 1.0'
 end
-

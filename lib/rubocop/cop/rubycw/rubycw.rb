@@ -4,10 +4,10 @@ module RuboCop
   module Cop
     module Rubycw
       # Execute `ruby -cw` and wrap the warning as RuboCop offense.
-      class Rubycw < Cop
+      class Rubycw < Base
         include RangeHelp
 
-        def investigate(processed_source)
+        def on_new_investigation
           source = processed_source.raw_source
 
           warnings(source).each do |line|
@@ -15,7 +15,7 @@ module RuboCop
             message = line[/.+:\d+: warning: (.+)$/, 1]
 
             range = source_range(processed_source.buffer, lnum, 0)
-            add_offense(range, location: range, message: message)
+            add_offense(range, message: message)
           end
         end
 
