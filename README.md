@@ -6,7 +6,7 @@ You can get Ruby's warning as a RuboCop offense by rubocop-rubycw.
 
 ## Requirements
 
-* Ruby 2.3 or greater.
+* Ruby 2.4 or greater.
   * But I highly recommend to use Ruby 2.6 or greater.
     Because it is about 10x slower if it works on Ruby 2.5 or lower.
 
@@ -43,4 +43,3 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/rubocop-hq/rubocop-rubycw.
-
