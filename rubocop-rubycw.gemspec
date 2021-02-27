@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Integrate RuboCop and ruby -cw}
   spec.description   = %q{Integrate RuboCop and ruby -cw}
-  spec.homepage      = "https://github.com/rubocop-hq/rubocop-rubycw"
+  spec.homepage      = "https://github.com/rubocop/rubocop-rubycw"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.4.0")
   spec.license       = 'MIT'
 
