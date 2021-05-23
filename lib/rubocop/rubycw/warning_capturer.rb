@@ -5,11 +5,16 @@ module RuboCop
     module WarningCapturer
       if defined?(RubyVM::AbstractSyntaxTree)
         module ::Warning
-          def self.warn(*message)
+          def self.warn(*message, **kwargs)
             if WarningCapturer.warnings
               WarningCapturer.warnings.concat message
             else
-              super
+              if RUBY_VERSION >= '3'
+                # kwargs is available since Ruby 3
+                super(*message, **kwargs)
+              else
+                super(*message)
+              end
             end
           end
         end
