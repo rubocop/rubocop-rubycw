@@ -28,4 +28,9 @@ RSpec.describe RuboCop::Cop::Rubycw::Rubycw do
       p 1
     RUBY
   end
+
+  # https://github.com/rubocop/rubocop-rubycw/issues/12
+  it 'does not crash with `Kernel.#warn` and uplevel' do
+    warn 'test', uplevel: 0
+  end
 end
