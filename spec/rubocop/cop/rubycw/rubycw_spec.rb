@@ -2,9 +2,15 @@
 
 RSpec.describe RuboCop::Cop::Rubycw::Rubycw, :config do
   it 'registers an offense with ruby -cw' do
+    literal_unused_warning = if RUBY_VERSION < "3.3"
+      "unused literal ignored"
+    else
+      "possibly useless use of a literal in void context"
+    end
+
     expect_offense(<<~RUBY)
       1
-      ^ unused literal ignored
+      ^ #{literal_unused_warning}
       p 1
 
       p if /re/
