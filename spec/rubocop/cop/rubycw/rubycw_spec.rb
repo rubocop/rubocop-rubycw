@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 RSpec.describe RuboCop::Cop::Rubycw::Rubycw, :config do
+  include_context 'mock console output'
+
   it 'registers an offense with ruby -cw' do
     literal_unused_warning = if RUBY_VERSION < "3.3"
       "unused literal ignored"
