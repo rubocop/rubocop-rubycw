@@ -6,9 +6,7 @@ You can get Ruby's warning as a RuboCop offense by rubocop-rubycw.
 
 ## Requirements
 
-* Ruby 2.4 or greater.
-  * But I highly recommend to use Ruby 2.6 or greater.
-    Because it is about 10x slower if it works on Ruby 2.5 or lower.
+* Ruby 2.7 or greater.
 
 ## Installation
 
@@ -31,8 +29,11 @@ Or install it yourself as:
 Put this into your `.rubocop.yml`.
 
 ```yaml
-require: rubocop-rubycw
+plugins: rubocop-rubycw
 ```
+
+> [!NOTE]
+> The plugin system is supported in RuboCop 1.72+. In earlier versions, use `require` instead of `plugins`.
 
 ## Development
 
