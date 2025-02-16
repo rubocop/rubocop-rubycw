@@ -9,7 +9,7 @@ module RuboCop
       def about
         LintRoller::About.new(
           name: 'rubocop-rubycw',
-          version: Version::STRING,
+          version: VERSION,
           homepage: 'https://github.com/rubocop/rubocop-rubycw',
           description: 'Integrate RuboCop and `ruby -cw`.'
         )
